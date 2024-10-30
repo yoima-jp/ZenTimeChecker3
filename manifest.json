@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ZEN Study(旧N予備校)の残り時間わかるやーつ3.0",
+  "version": "3.0",
+  "description": "N予備の必修授業の残り時間とテストの個数などがわかります。",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": ["https://www.nnn.ed.nico/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.nnn.ed.nico/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
